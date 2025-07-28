@@ -1,0 +1,43 @@
+body {
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+        background: #000;
+    }
+    
+    .desktop-content p, .mobile-content p {
+        font-size: 8px;
+        line-height: 8px;
+        text-align: justify;
+        background: url(Janelle.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+    /* Desktop styles - show desktop content, hide mobile content */
+    @media screen and (min-width: 769px) {
+        .desktop-content {
+            display: block;
+        }
+        .mobile-content {
+            display: none;
+        }
+    }
+    /* Mobile styles - show mobile content, hide desktop content */
+    @media screen and (max-width: 768px) {
+        .desktop-content {
+            display: none;
+        }
+        .mobile-content {
+            display: block;
+        }
+        
+        /* You can add mobile-specific styling here if needed */
+        .mobile-content p {
+            font-size: 6px;
+            line-height: 6px;
+        }
+    }
